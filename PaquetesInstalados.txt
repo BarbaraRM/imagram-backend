@@ -1,0 +1,42 @@
+1. Clone del repositorio GitHub el proyecto y asigne como RemoteName el mismo nombre del repositorio
+
+2. Instalar dependencias npm
+    Inicializar el proyecto> npm init -y
+    Limpiar el cache npm, para instalar los comandos actualizados: npm cache clean --force
+    Instalar paquetes de Producción: npm i express sequelize multer
+    Instalar paquetes de Producción: npm i pg pg-hstore cors morgan dotenv
+    Instalar paquetes de Producción: npm i bcrypt crypto-js
+    Instalar paquetes de Producción: npm i passport passport-local
+    Instalar paquetes de Producción: npm i jsonwebtoken
+    Instalar paquetes de Producción: npm i redis connect-redis
+    Instalar paquetes de Producción: npm i express-session
+    Instalar paquetes de Producción: npm i socket.io
+
+    Instalar paquetes de Desarrollo: npm i nodemon -D 
+    
+
+    Información sobre las dependencias:
+        express: framework para la creación de un servidor de node.js
+        nodemon: reinicia el servidor cada vez que se efectuan cambios (no es necesario en Producción)
+        cors: middleware que permite que dos servidores intercambien información entre ellos
+        morgan: permite ver por consola las peticion que llegan al servidor desde el cliente
+        expressJSON: permite observar datos de las peticiones en formato json
+        pg pg-hstore: permiten la conexion con la base de datos PostgreSQL
+        dotenv: permite la configuracion de variables de entorno
+        crypto-js: permite encriptar datos que se enviarán al cliente y desencriptar los datos se reciben del cliente
+        bcrypt: permite encriptar contraseñas y datos sencibles
+        passport: permite la autentificacion de usuarios.
+        jsonwebtoken: permite crear un token cifrado que se almacenará en el navegador del lado del cliente
+        redis: permite la conexion a la base de datos redis, donde se guardarán las sesiones.
+        express-session: permite manejar las sesiones dentro del servidor express
+3. Configurar proyecto
+    Vease los archivos server.js e indes.js
+    Para que el servidor se pueda iniciar se ha configurado un script en el package.json al cual se ha denominado server y otro dev-server
+        start = Fase de Producción
+        dev-server = Fase de Desarrollo
+
+        Para iniciar el servidor ejecute el siguiente comando: npm run-script dev-server
+
+HERRAMIENTAS
+
+    https://insomnia.rest/download/#windows

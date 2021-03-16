@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>FUNCION SEGUIR A</h3>
+    <p id="45" name="">Usuario en sesion: Barbara ID: 45</p>
+    <!--Cada boton seguir tendra el id del usuario al que se desea seguir-->
+    <button id="btn_seguir" onclick="SeguirA(45,27)">Seguir a Alberto ID: 27</button>
+    <hr>
+
+    <h3>SOLICITUD DE SEGUIMIENTO</h3>
+    <p id="45" name="">Usuario en sesion: Alberto ID: 27</p>
+    <p id="45" name="">Barbara (45) ha solicitado seguirte</p>
+    <!--Cada boton seguir tendra el id del usuario al que se desea seguir-->
+    <!--SolicitudSeguimiento(id_user_solicita, id_usuarioaseguir, respuesta_solicitud)-->
+    <button id="btn_aceptar" onclick="SolicitudSeguimiento(45,27, true)">Aceptar (Barbara 45)</button>
+    <button id="btn_rechazar" onclick="SolicitudSeguimiento(45,27, false)">Recahzar (Barbara 45)</button>
+    <hr>
+
+
+    <h3>PUBLICACIONS</h3>
+    <img width="300px" height="300px"
+        src="https://scontent.fmch2-1.fna.fbcdn.net/v/t1.0-9/120995486_795582184536940_5327279735104236346_o.jpg?_nc_cat=1&ccb=2&_nc_sid=730e14&_nc_eui2=AeE_kWCvQdXkq7LuW9aiqa7z1uXOEEJSxuTW5c4QQlLG5OsREmUmP8BOuLxC7mXnngKp0Jfljd1B6gd8CyUH88t6&_nc_ohc=MFiJWw2rzB0AX8Rsu-O&_nc_ht=scontent.fmch2-1.fna&oh=e412804a0334b9b5a67609a9c0f9d24c&oe=5FD370E8"
+        alt="">
+    <!--reaccionar(id_publicacion, id_user, tipo_reaccion)-->
+    <div>
+
+        <button onclick="Reaccionar(37, 45, '2020-11-23 07:00:00', 'ME_GUSTA')">ME GUSTA</button>
+        <button onclick="Reaccionar(37, 45, '2020-11-23 07:00:00', 'ME_ENCANTA')">ME ENCANTA</button>
+        <button onclick="Reaccionar(37, 45, '2020-11-23 07:00:00', 'ME_ENTRISTECE')">ME ENTRISTECE</button>
+        <button onclick="Reaccionar(37, 45, '2020-11-23 07:00:00', 'ME_ENFADA')">ME ENFADA</button>
+        <button onclick="Reaccionar(37, 45, '2020-11-23 07:00:00', 'ME_SORPRENDE')">ME SORPRENDE</button>
+        <button onclick="Reaccionar(37, 45, '2020-11-23 07:00:00', 'ME_DIVIERTE')">ME DIVIERTE</button>
+    </div>
+    <hr>
+
+
+    <h3>COMENTARIOS</h3>
+    <input id='coment' type="text">
+    <button id='btn_enviar_comentario'
+        onclick="Comentar(37, 45, document.getElementById('coment').value)">Enviar</button>
+
+
+    <div>
+        <input id="hastag" type="text">
+        <button onclick="ObtenerHastag()">Obtener Hastag</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

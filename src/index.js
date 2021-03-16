@@ -8,7 +8,7 @@ async function main() {
 
     //INICIALIZACION DEL SERVIDOR
     //server.listen(5000, "0.0.0.0")
-
+    console.log(`aqui`);
     server.listen(app.get('port'), "0.0.0.0", () => { //server.listen(4000, "0.0.0.0")
         console.log(`Server Imagram Backend on port ${app.get('port')}`);
     });

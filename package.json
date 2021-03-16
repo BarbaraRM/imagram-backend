@@ -2,15 +2,15 @@
   "name": "imagrambackend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev-server": "nodemon src/index.js",
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KADAME/imagrambackend.git"
+    "url": "git+https://github.com/BarbaraRM/imagram-backend.git"
   },
   "keywords": [],
   "author": "",

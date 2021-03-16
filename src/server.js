@@ -14,7 +14,7 @@ require('dotenv').config()
 
 /*Asignar puerto al servidor*/
 const port = process.env.APP_PORT; //Obtenemos el puerto desde nuestra variable de entorno .env y en caso de que no exita usara el 5000
-app.set('port', port || 5000);
+app.set('port', process.env.PROT || 5000);
 
 
 
